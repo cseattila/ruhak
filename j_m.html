@@ -9,202 +9,295 @@
   <title>Ruhák</title>
   <style>
     #container {
-      width: 700px;
-      height: 800px;
+      width: 600px;
+      height: 500px;
       background-color: #556;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: left;
+      justify-content: left;
       overflow: hidden;
       border-radius: 7px;
       touch-action: none;
+		margin: auto;
     }
+	
+	
+	#szekerny {
+	
+	 width: 200px;
+      height:400px;
+	  
+	  margin: 5px;
+	  order:0;
+
+	  background-color:#FFFFFF;
+      border-radius: 7px;
+   
+      touch-action: none;
+      user-select: none;
+	
+	  
+	}
+	
     #kendo {
       width: 80px;
       height: 110px;
-       background-repeat: no-repeat;
-	 background-image: url('lany-kendo.png');
-    background-position: -52px -34px;
+      background-repeat: no-repeat;
+	  background-image: url('lany-kendo.png');
+      background-position: -52px -34px;
       touch-action: none;
       user-select: none;
+	  position: absolute;
     }
 	#felsoszoknya {
-    width: 190px;
+      width: 190px;
       height:160px;
-       background-repeat: no-repeat;
-	 background-image: url('lany-felsoszoknya.png');
-    background-position: -75px -215px;
+      background-repeat: no-repeat;
+	  background-image: url('lany-felsoszoknya.png');
+      background-position: -75px -215px;
       touch-action: none;
       user-select: none;
+	  position: absolute;
     }
 	
 	
 	#felso {
-    width: 180px;
+      width: 180px;
       height:160px;
-       background-repeat: no-repeat;
-	 background-image: url('lany-felso.png');
-    background-position: -75px -120px;
+      background-repeat: no-repeat;
+	  background-image: url('lany-felso.png');
+      background-position: -75px -120px;
       touch-action: none;
       user-select: none;
+	  position: absolute;
     }
 	
 
 
 	#alsoszoknya {
-    width: 220px;
-      height:200px;
+       width: 220px;
+       height:200px;
        background-repeat: no-repeat;
-	 background-image: url('lany-alsoszoknya.png');
-    background-position: -65px -230px;
-      touch-action: none;
-      user-select: none;
+	   background-image: url('lany-alsoszoknya.png');
+       background-position: -65px -230px;
+       touch-action: none;
+       user-select: none;
+	   position: absolute;
     }
 
 
-	#alap {
-    width: 300px;
+    .alap_keret {
+	  width: 200px;
       height:400px;
-       background-repeat: no-repeat;
-	 background-image: url('lany-alap.png');
-    background-position: 0px 0px;
+	  margin:5px; 
+    order:2;
+
+	background-color:#FFFFFF;
+      border-radius: 7px;
+   
       touch-action: none;
       user-select: none;
+
+	}
+	
+
+	#alap {
+	 width: 100%;
+      height:100%;
+       background-repeat: no-repeat;
+	   background-image: url('lany-alap.png');
+       background-position: -80px -20px;
     }
 	
 	
 	
 	#felso2 {
-    width: 200px;
+      width: 200px;
       height:200px;
-       background-repeat: no-repeat;
-	 background-image: url('felsoruha.png');
-    background-position: -70px -120px;
+      background-repeat: no-repeat;
+	  background-image: url('felsoruha.png');
+      background-position: -70px -120px;
       touch-action: none;
       user-select: none;
+      position: absolute;
+
     }
 	
 	#kendo2 {
-    width: 83px;
+      width: 83px;
       height:92px;
-       background-repeat: no-repeat;
-	 background-image: url('kendo.png');
-    background-position: -129px -67px;
+      background-repeat: no-repeat;
+	  background-image: url('kendo.png');
+      background-position: -129px -67px;
       touch-action: none;
       user-select: none;
+      position: absolute;
     }
 	
 	#szoknya2 {
-    width: 163px;
+      width: 163px;
       height:187px;
-       background-repeat: no-repeat;
-	 background-image: url('szoknya.png');
-    background-position: -84px -211px;
+      background-repeat: no-repeat;
+	  background-image: url('szoknya.png');
+      background-position: -84px -211px;
       touch-action: none;
       user-select: none;
-    }
+      position: absolute;
+	}
+	
+	#koto {
+      width: 163px;
+      height:187px;
+      background-repeat: no-repeat;
+	  background-image: url('koto.png');
+      background-position: -84px -211px;
+      touch-action: none;
+      user-select: none;
+	  position: absolute;
+	}
+	
     #item:active {
       background-color: rgba(168, 218, 220, 1.00);
     }
+	
     #item:hover {
       cursor: pointer;
       border-width: 20px;
     }
+	
+	#oltozet_leiras {
+	 width: 600px;
+      height:200px;
+	  
+	  margin: 5px;
+	  order:0;
+
+	  background-color:#EFEFEF;
+      border-radius: 7px;
+   
+      touch-action: none;
+      user-select: none;
+	  	margin: auto;
+	}
+	#Cim {
+	 width: 600px;
+      height:20px;
+	  
+	  margin: 0px;
+	  padding: 5px 5px; 
+	  order:0;
+
+	  background-color:#5FEF6F;
+      border-radius: 7px;
+   
+      touch-action: none;
+      user-select: none;
+	  	margin: auto;
+	}
+	#log {
+	  display : none;
+	}
+	#outerContainer {
+	width :100%;
+	 align-items: center;
+	 
+      justify-content: center;
+	}
   </style>
 </head>
 
 <body>
 
   <div id="outerContainer">
-  <div id ="Cim">
-  Fogj egy ruhát
-  </div> 
+ 
+ 
  <div id="container">
 		
-	<br>
-	<center>
-	   <div id="szoknya2">
-	 &nbsp;
-
-      </div>
-      <div id="alsoszoknya">
-	 &nbsp;
-
-      </div>
-	  <br>
-	    <div id="felsoszoknya">
-	 &nbsp;
-
-      </div>
+	
+	<div id = "szekerny" >
+	   <div id="szoknya2">	 &nbsp;      </div>
+	   <br>
+	   
+      <div id="alsoszoknya">	 &nbsp;      </div>
 	  <br>
 	  
-	  
-	  <div id="felso">
-
-      </div>
-	  
-	  
- </center>
-	   <center>
+	  <div id="felsoszoknya">	 &nbsp;      </div>
 	  <br>
-	   <div id="kendo">
-	 &nbsp;
-
-      </div>
+	  	  
+	  <div id="felso">     &nbsp;  </div>  
+ 	  <br>
+	  
+	  <div id="kendo">	 &nbsp;     </div>
 	  <br>
-	  
-	  
-	  
-	    <div id="felso2">
-	 &nbsp;
-
-      </div>
-	  
-	  
-	 
-	  
-	  
+	   
+	   <div id="koto"> &nbsp;    </div>
+	   <br> 
+	   
+	  <div id="felso2"> &nbsp;   </div>
+  	  <br> 
 	  
 	  
 	   
-	    <div id="kendo2">
-	 &nbsp;
-
-      </div>
-	  
-	    </center>
+	    <div id="kendo2"> &nbsp; </div>
 		
-	  <div id="alap">
-	 &nbsp;
-
-      </div>
+	</div>
+		<div class ="alap_keret">
+			<div id="alap">		&nbsp;   </div>
+		</div>
     </div>
+	 <div id ="Cim">
+  Fogj egy ruhát
   </div>
+	 
+  <div id ="oltozet_leiras">
+    &nbsp; 
+  </div>
+	
+  </div>
+  
+  <div id ="log">
+  Fogj egy ruhát
+  </div> 
 
   <script>
    var container = document.querySelector("#container");
    var cimContiner =document.querySelector("#Cim");
 	
 	function initElement(e) {
-	 e.element = document.querySelector("#"+e.name);
-     e.currentX = 0;
-	 e.currentY = 0;
-	 e.initialX = 0;
-	 e.initialY = 0;
-	 e.xOffset = 0;
-     e.yOffset = 0;
+		 e.element = document.querySelector("#"+e.name);
+		 
+		 if(!('currentX' in e)){
+		   e.currentX = 0;
+		 }
+		 
+		 if(!('currentY' in e)){
+		   e.currentY = 0;
+		 }
+		
+		 e.initialX =  e.currentX ;
+		 e.initialY = e.currentY;
+		 e.xOffset = 0;
+		 e.yOffset = 0;
+		 setTranslate(e.currentX, e.currentY, e.element);
+			
 	}
 	
+   var oltozet = [ {name:'oltozet1' , good: false , leiras :'Ez az esőszámú öltözet' },
+				   {name:'oltozet2', good: false , leiras :'Ez az masodik öltözet'}
+                 ] 
 
-    
-
-    var  gragedObjectModel= [{name:'kendo',leiras:'Ez egy kendő'}
-	                        ,{name:'felsoszoknya'}
-							,{name:'felso'}
-							,{name:'alsoszoknya'}
-							,{name:'felso2'}
-							,{name:'kendo2'}
-							,{name:'szoknya2'}	]
+    var  gragedObjectModel= [{name:'kendo',leiras:'Ez egy kendő',endSpace:{X:262,Y:-36}, oltozetSzam:0 }
+	                        ,{name:'felsoszoknya',leiras:'Felső szoknya',endSpace:{X:209,Y:147}, oltozetSzam:0}
+							,{name:'felso',leiras:'felso',endSpace:{X:205,Y:37}, oltozetSzam:0}
+							,{name:'alsoszoknya',leiras:'alsoszoknya',endSpace:{X:200,Y:166}, oltozetSzam:0}
+							,{name:'felso2',leiras:'felso2', oltozetSzam:1 ,endSpace:{X:200,Y:166}}
+							,{name:'kendo2',leiras:'kendo2', oltozetSzam:1,endSpace:{X:258,Y:-77}}
+							,{name:'szoknya2',leiras:'szoknya2', oltozetSzam:1,endSpace:{X:216,Y:189}}
+                            ,{name:'koto',leiras:'koto', oltozetSzam:1,endSpace:{X:216,Y:105}}	
+							]
+	
+							
+							
 	gragedObjectModel.forEach(element => initElement(element));
 	
   
@@ -242,7 +335,9 @@
       dragedIttem.initialY = dragedIttem.currentY;
 
       active = false;
-    }
+      testEnd();
+	  renderFeliratok();
+	}
 
     function drag(e) {
       if (active) {
@@ -261,12 +356,49 @@
         dragedIttem.yOffset = dragedIttem.currentY;
 
         setTranslate(dragedIttem.currentX, dragedIttem.currentY, dragedIttem.element);
+		
       }
     }
 
     function setTranslate(xPos, yPos, el) {
-      el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+      
+	  el.style.transform = " perspective(500px) translate3d(" + xPos + "px, " + yPos + "px, 0) scale("+ ((xPos <50) ?0.5:1)+") ";
     }
+	  var good= true;
+	function testEnd(){
+	 oltozet.forEach(element => element.good=true);
+  	 var logContiner =document.querySelector("#log");
+	 gragedObjectModel.forEach(element => testElement(element));
+	 logContiner.innerHTML="A ruhák :"+JSON.stringify(gragedObjectModel) +" Az öltözetek"+JSON.stringify(oltozet);
+	 
+	}
+	
+	function renderFeliratok(){
+	    var leiras ='';
+		var hany=0;
+		oltozet.forEach(function (e) { 
+			if (e.good) {leiras +=e.leiras ;hany++;}
+			}
+		);
+		  var leirContiner =document.querySelector("#oltozet_leiras");
+		if (hany ==1) {
+		 leirContiner.innerHTML=leiras;
+		} else if  (hany >1){
+		 leirContiner.innerHTML='Vicces vagy :-) !!';
+		}else {
+		 leirContiner.innerHTML='';
+		}
+	}
+	
+   function testElement(element){
+    
+	if (typeof element.endSpace  !== 'undefined'){
+	   if (Math.abs(element.endSpace.X -element.currentX)>20) {
+        oltozet[element.oltozetSzam].good = false ;
+	   }
+	}
+   }
+   
   </script>
 </body>
 
