@@ -203,6 +203,11 @@
 	 
       justify-content: center;
 	}
+	.cim {
+	padding: 15px 0px 0px 0px  ; 
+	margin : 2px;
+	text-align :center;
+	}
   </style>
 </head>
 
@@ -282,18 +287,19 @@
 			
 	}
 	
-   var oltozet = [ {name:'oltozet1' , good: false , leiras :'Ez az esőszámú öltözet' },
-				   {name:'oltozet2', good: false , leiras :'Ez az masodik öltözet'}
+   var oltozet = [ {name:'oltozet1' , good: false , leiras :'<p class="cim" >Makói népviselet (1857)<p>    Makó város népviseletéről az egyik első képi ábrázolás Joseph Bösstől származik. A nő ünnepi ruhájának formáját a polgári biedermeier szoknya alatt viselt kúp alakú "abroncs" helyett sok alsószoknyából alakították. A bokáig érő selyemszoknya előtt körben sötétlila kötő van. A testhönálló, vagy testhözálló nevét a szabása és viselése adja, a női felsőruha követi a test vonalát, derékban szűkülő, és a szegése a harang alakú szoknyára szépen rásimul. A nő fekete színű, selyem fejkendőt visel.' },
+				   {name:'oltozet2', good: false , leiras :'Menyecske öltözet-együttese. Apátfalva, 20. sz. eleje'}
+			
                  ] 
 
-    var  gragedObjectModel= [{name:'kendo',leiras:'Ez egy kendő',endSpace:{X:262,Y:-36}, oltozetSzam:0 }
-	                        ,{name:'felsoszoknya',leiras:'Felső szoknya',endSpace:{X:209,Y:147}, oltozetSzam:0}
-							,{name:'felso',leiras:'felso',endSpace:{X:205,Y:37}, oltozetSzam:0}
-							,{name:'alsoszoknya',leiras:'alsoszoknya',endSpace:{X:200,Y:166}, oltozetSzam:0}
-							,{name:'felso2',leiras:'felso2', oltozetSzam:1 ,endSpace:{X:200,Y:166}}
-							,{name:'kendo2',leiras:'kendo2', oltozetSzam:1,endSpace:{X:258,Y:-77}}
-							,{name:'szoknya2',leiras:'szoknya2', oltozetSzam:1,endSpace:{X:216,Y:189}}
-                            ,{name:'koto',leiras:'koto', oltozetSzam:1,endSpace:{X:216,Y:105}}	
+    var  gragedObjectModel= [{name:'kendo',leiras:'Fekete fejkendő',endSpace:{X:262,Y:-36}, oltozetSzam:0 }
+	                        ,{name:'felsoszoknya',leiras:'Kötő',endSpace:{X:209,Y:147}, oltozetSzam:0}
+							,{name:'felso',leiras:'Testhönálló',endSpace:{X:205,Y:37}, oltozetSzam:0}
+							,{name:'alsoszoknya',leiras:'Szoknya',endSpace:{X:200,Y:166}, oltozetSzam:0}
+							,{name:'felso2',leiras:'Virágmintákkal díszített testhönálló', oltozetSzam:1 ,endSpace:{X:200,Y:-8}}
+							,{name:'kendo2',leiras:'Kék kendő', oltozetSzam:1,endSpace:{X:258,Y:-77}}
+							,{name:'szoknya2',leiras:'Szoknya', oltozetSzam:1,endSpace:{X:216,Y:189}}
+                            ,{name:'koto',leiras:'Kötő', oltozetSzam:1,endSpace:{X:216,Y:105}}	
 							]
 	
 							
@@ -393,7 +399,8 @@
    function testElement(element){
     
 	if (typeof element.endSpace  !== 'undefined'){
-	   if (Math.abs(element.endSpace.X -element.currentX)>20) {
+	   if ((Math.abs(element.endSpace.X -element.currentX)>20) ||
+           (Math.abs(element.endSpace.Y -element.currentY)>20) 	  ) {
         oltozet[element.oltozetSzam].good = false ;
 	   }
 	}
