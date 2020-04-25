@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<head>
+  <meta name="viewport" 
+        content="width=device-width, 
+        initial-scale=1.0, 
+        user-scalable=no" />
+  <title>Ruhák</title>
+  <style>
+    #container {
+      width: 700px;
+      height: 800px;
+      background-color: #556;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 7px;
+      touch-action: none;
+    }
+    #kendo {
+      width: 80px;
+      height: 110px;
+       background-repeat: no-repeat;
+	 background-image: url('lany-kendo.png');
+    background-position: -52px -34px;
+      touch-action: none;
+      user-select: none;
+    }
+	#felsoszoknya {
+    width: 190px;
+      height:160px;
+       background-repeat: no-repeat;
+	 background-image: url('lany-felsoszoknya.png');
+    background-position: -75px -215px;
+      touch-action: none;
+      user-select: none;
+    }
+	
+	
+	#felso {
+    width: 180px;
+      height:160px;
+       background-repeat: no-repeat;
+	 background-image: url('lany-felso.png');
+    background-position: -75px -120px;
+      touch-action: none;
+      user-select: none;
+    }
+	
+
+
+	#alsoszoknya {
+    width: 220px;
+      height:200px;
+       background-repeat: no-repeat;
+	 background-image: url('lany-alsoszoknya.png');
+    background-position: -65px -230px;
+      touch-action: none;
+      user-select: none;
+    }
+
+
+	#alap {
+    width: 300px;
+      height:400px;
+       background-repeat: no-repeat;
+	 background-image: url('lany-alap.png');
+    background-position: 0px 0px;
+      touch-action: none;
+      user-select: none;
+    }
+	
+	
+	
+	#felso2 {
+    width: 200px;
+      height:200px;
+       background-repeat: no-repeat;
+	 background-image: url('felsoruha.png');
+    background-position: -70px -120px;
+      touch-action: none;
+      user-select: none;
+    }
+	
+	#kendo2 {
+    width: 83px;
+      height:92px;
+       background-repeat: no-repeat;
+	 background-image: url('kendo.png');
+    background-position: -129px -67px;
+      touch-action: none;
+      user-select: none;
+    }
+	
+	#szoknya2 {
+    width: 163px;
+      height:187px;
+       background-repeat: no-repeat;
+	 background-image: url('szoknya.png');
+    background-position: -84px -211px;
+      touch-action: none;
+      user-select: none;
+    }
+    #item:active {
+      background-color: rgba(168, 218, 220, 1.00);
+    }
+    #item:hover {
+      cursor: pointer;
+      border-width: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="outerContainer">
+  <div id ="Cim">
+  Fogj egy ruhát
+  </div> 
+ <div id="container">
+		
+	<br>
+	<center>
+	   <div id="szoknya2">
+	 &nbsp;
+
+      </div>
+      <div id="alsoszoknya">
+	 &nbsp;
+
+      </div>
+	  <br>
+	    <div id="felsoszoknya">
+	 &nbsp;
+
+      </div>
+	  <br>
+	  
+	  
+	  <div id="felso">
+
+      </div>
+	  
+	  
+ </center>
+	   <center>
+	  <br>
+	   <div id="kendo">
+	 &nbsp;
+
+      </div>
+	  <br>
+	  
+	  
+	  
+	    <div id="felso2">
+	 &nbsp;
+
+      </div>
+	  
+	  
+	 
+	  
+	  
+	  
+	  
+	   
+	    <div id="kendo2">
+	 &nbsp;
+
+      </div>
+	  
+	    </center>
+		
+	  <div id="alap">
+	 &nbsp;
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+   var container = document.querySelector("#container");
+   var cimContiner =document.querySelector("#Cim");
+	
+	function initElement(e) {
+	 e.element = document.querySelector("#"+e.name);
+     e.currentX = 0;
+	 e.currentY = 0;
+	 e.initialX = 0;
+	 e.initialY = 0;
+	 e.xOffset = 0;
+     e.yOffset = 0;
+	}
+	
+
+    
+
+    var  gragedObjectModel= [{name:'kendo',leiras:'Ez egy kendő'}
+	                        ,{name:'felsoszoknya'}
+							,{name:'felso'}
+							,{name:'alsoszoknya'}
+							,{name:'felso2'}
+							,{name:'kendo2'}
+							,{name:'szoknya2'}	]
+	gragedObjectModel.forEach(element => initElement(element));
+	
+  
+    var dragedIttem = null;
+    var active = false;
+    
+    container.addEventListener("touchstart", dragStart, false);
+    container.addEventListener("touchend", dragEnd, false);
+    container.addEventListener("touchmove", drag, false);
+
+    container.addEventListener("mousedown", dragStart, false);
+    container.addEventListener("mouseup", dragEnd, false);
+    container.addEventListener("mousemove", drag, false);
+
+    function dragStart(e) {
+	
+	  dragedIttem =  gragedObjectModel.find(element => element.element === e.target); 
+	  
+	  if ( typeof dragedIttem !== 'undefined') {
+        active = true;
+		cimContiner.innerHTML=dragedIttem.leiras;
+		  if (e.type === "touchstart") {
+			dragedIttem.initialX = e.touches[0].clientX - dragedIttem.xOffset;
+			dragedIttem.initialY = e.touches[0].clientY - dragedIttem.yOffset;
+		  } else {
+			dragedIttem.initialX = e.clientX - dragedIttem.xOffset;
+			dragedIttem.initialY = e.clientY - dragedIttem.yOffset;
+		  }
+      }
+    }
+
+    function dragEnd(e) {
+	
+      dragedIttem.initialX = dragedIttem.currentX;
+      dragedIttem.initialY = dragedIttem.currentY;
+
+      active = false;
+    }
+
+    function drag(e) {
+      if (active) {
+      
+        e.preventDefault();
+      
+        if (e.type === "touchmove") {
+          dragedIttem.currentX = e.touches[0].clientX - dragedIttem.initialX;
+          dragedIttem.currentY = e.touches[0].clientY - dragedIttem.initialY;
+        } else {
+          dragedIttem.currentX = e.clientX - dragedIttem.initialX;
+          dragedIttem.currentY = e.clientY - dragedIttem.initialY;
+        }
+
+        dragedIttem.xOffset = dragedIttem.currentX;
+        dragedIttem.yOffset = dragedIttem.currentY;
+
+        setTranslate(dragedIttem.currentX, dragedIttem.currentY, dragedIttem.element);
+      }
+    }
+
+    function setTranslate(xPos, yPos, el) {
+      el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+    }
+  </script>
+</body>
+
+</html>
