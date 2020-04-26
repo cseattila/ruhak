@@ -265,7 +265,7 @@
       user-select: none;
 	  position: absolute;
 	  transform:  translate3d(760px, 100px, 0);
-	  size: 10 pt;
+	 font-size: 9pt;
 	   overflow-y: scroll;
 	    text-align: justify;
 	}
@@ -510,18 +510,28 @@
           dragedIttem.currentY = e.clientY - dragedIttem.initialY;
         }
 
+		helyreugraszt(dragedIttem);
         dragedIttem.xOffset = dragedIttem.currentX;
         dragedIttem.yOffset = dragedIttem.currentY;
+
 
         setTranslate(dragedIttem.currentX, dragedIttem.currentY, dragedIttem.element);
 		
       }
     }
 
+    function helyreugraszt(element){
+		 if ((Math.abs(element.endSpace.X -element.currentX)<3) ||
+           (Math.abs(element.endSpace.Y -element.currentY)<3) 	  ) {
+		   element.currentX =element.endSpace.X;
+		   element.currentY =element.endSpace.Y;
+		   }
+	}
+	
     function setTranslate(xPos, yPos, el) {
-      
-	  el.style.transform = " perspective(500px) translate3d(" + xPos + "px, " + yPos + "px, 0) scale("+ ((xPos <150) ?0.5:1)+") ";
+      el.style.transform = " perspective(500px) translate3d(" + xPos + "px, " + yPos + "px, 0) scale("+ ((xPos <150) ?0.5:1)+") ";
     }
+	
 	  var good= true;
 	function testEnd(){
 	 oltozet.forEach(element => element.good=true);
@@ -554,8 +564,8 @@
    function testElement(element){
     
 	if (typeof element.endSpace  !== 'undefined'){
-	   if ((Math.abs(element.endSpace.X -element.currentX)>20) ||
-           (Math.abs(element.endSpace.Y -element.currentY)>20) 	  ) {
+	   if ((Math.abs(element.endSpace.X -element.currentX)>10) ||
+           (Math.abs(element.endSpace.Y -element.currentY)>10) 	  ) {
         oltozet[element.oltozetSzam].good = false ;
 	   }
 	}
