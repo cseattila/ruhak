@@ -26,8 +26,7 @@
   left: 0;
   right: 0;
   z-index: 9999;
-  margin-left: 20px;
-  margin-right: 20px;
+
    background-position: center;
      background-size: 950px 500px;
     }
@@ -105,7 +104,7 @@
 
 
     .alap_keret {
-	  width: 200px;
+	  width: 140px;
       height:400px;
 	  margin:70px 0px; 
       order:2;
@@ -121,13 +120,13 @@
       height:100%;
        background-repeat: no-repeat;
 	   background-image: url('lany-alap.png');
-       background-position: -80px -20px;
+       background-position: -120px -20px;
     }
 	
 	
 	
     .alap_keret_2 {
-	  width: 200px;
+	  width: 180px;
       height:400px;
 	  margin:70px 0px; 
     order:2;
@@ -142,12 +141,12 @@
 	
 
 	#alap_2 {
-	 width: 100%;
+	  width: 100%;
       height:100%;
        background-repeat: no-repeat;
 	   background-image: url('ferfi_alap.png');
-       background-position: 0px 0px;
-	   background-size:100%;
+       background-position: -110px -25px;
+	   
     }
 	
 	
@@ -197,6 +196,52 @@
 	  position: absolute;
 	}
 	
+	
+	
+	#felso_f {
+      width: 163px;
+      height:187px;
+      background-repeat: no-repeat;
+	  background-image: url('felso.png');
+      background-position: -134px -110px;
+      touch-action: none;
+      user-select: none;
+	  position: absolute;
+	}
+	
+	#melleny {
+      width: 100px;
+      height:123px;
+      background-repeat: no-repeat;
+	  background-image: url('melleny.png');
+      background-position: -151px -122px;
+      touch-action: none;
+      user-select: none;
+	  position: absolute;
+	}
+	#kalalp {
+      width: 66px;
+      height:53px;
+      background-repeat: no-repeat;
+	  background-image: url('kalalp.png');
+      background-position: -182px -50px;
+      touch-action: none;
+      user-select: none;
+	  position: absolute;
+	}
+	#gatya {
+      width: 109px;
+      height:164px;
+      background-repeat: no-repeat;
+	  background-image: url('gatya.png');
+      background-position: -156px -203px;
+      touch-action: none;
+      user-select: none;
+	  position: absolute;
+	}
+	
+	-----------------------
+	
     #item:active {
       background-color: rgba(168, 218, 220, 1.00);
     }
@@ -207,33 +252,38 @@
     }
 	
 	#oltozet_leiras {
-	 width: 600px;
-      height:200px;
+	 width: 160px;
+      height:350px;
 	  
 	  margin: 5px;
-	  order:0;
+	  order:5;
 
 	  background-color:#EFEFEF;
       border-radius: 7px;
    
-      touch-action: none;
+      touch-action: auto;
       user-select: none;
-	  	margin: auto;
+	  position: absolute;
+	  transform:  translate3d(760px, 100px, 0);
+	  size: 10 pt;
+	   overflow-y: scroll;
+	    text-align: justify;
 	}
+	
 	#Cim {
-	 width: 600px;
+	  width: 350px;
       height:20px;
 	  
-	  margin: 0px;
-	  padding: 5px 5px; 
-	  order:0;
-
+	  text-align:center;
 	  background-color:#5FEF6F;
       border-radius: 7px;
+    
+	  margin:70px 0px; 
    
       touch-action: none;
       user-select: none;
-	  	margin: auto;
+	  	  position: absolute;
+		transform:  translate3d(450px, 0px, 0);
 	}
 	#log {
 	  display : none;
@@ -245,9 +295,9 @@
 	 
       justify-content: center;
 	  
+	background-color:#FFDBB7;
+ 
 
- 
- 
 	}
 	#hater {
 	width :100%;
@@ -264,12 +314,26 @@
 	margin : 2px;
 	text-align :center;
 	}
+	#foCim {
+	width :100%;
+	height:150px;
+	padding: 0px 0px 0px 0px  ; 
+	margin : 2px;
+	text-align :center;
+	background-image: url('focim.png');
+	    background-position: center;
+        background-repeat: no-repeat;
+	
+	}
   </style>
 </head>
 
-<body>
-<div id="hater">
+<body style="background-color:#FFDBB7;">
+<div id="foCim">
+
+ &nbsp; 
 </div>
+<p style="text-align:center;">A nagymosás során összekeveredtek két női és egy férfi viselet darabjai. Segíts szétválogatni őket! <br> Húzd a figurákra a szerinted összetartozó elemeket! Ha helyesen válogatod össze az egyes szetteket, rövid ismertetést kapsz az adott viseletről! </p>
   <div id="outerContainer">
  
  
@@ -298,12 +362,28 @@
 	   
 	  <div id="felso2"> &nbsp;   </div>
   	  <br> 
-	  
-	  
 	   
-	    <div id="kendo2"> &nbsp; </div>
+	   <div id="kendo2"> &nbsp; </div>
+	   
+	   <br>
+	   
+	   
+	   <!-- férfi -->
+	   <div id="gatya"> &nbsp;   </div>
+  	   <br>
+	   <div id="melleny"> &nbsp;   </div>
+			<br>
 		
-	</div>
+	   
+			<div id="felso_f"> &nbsp;   </div>
+			<br>
+	   
+			<div id="kalalp"> &nbsp;   </div>
+  	    
+	    
+		
+		
+		</div>
 	</div>
 		<div class ="alap_keret">
 			<div id="alap">		&nbsp;   </div>
@@ -311,15 +391,17 @@
      	<div class ="alap_keret_2">
 			<div id="alap_2">		&nbsp;   </div>
 		</div>
+		 <div id ="Cim">
+			Fogj egy ruhát a szekrényből!
+		</div>
+		<div id ="oltozet_leiras">
+		&nbsp; 
+		</div>
     </div>
 	
-	 <div id ="Cim">
-     Fogj egy ruhát
-    </div>
+	
 	 
-  <div id ="oltozet_leiras">
-    &nbsp; 
-  </div>
+ 
 	
   </div>
   
@@ -347,23 +429,30 @@
 		 e.xOffset = 0;
 		 e.yOffset = 0;
 		 setTranslate(e.currentX, e.currentY, e.element);
-			
+		renderFeliratok();	
 	}
 	
-   var oltozet = [ {name:'oltozet1' , good: false , leiras :'<p class="cim" >Makói népviselet (1857)<p>    Makó város népviseletéről az egyik első képi ábrázolás Joseph Bösstől származik. A nő ünnepi ruhájának formáját a polgári biedermeier szoknya alatt viselt kúp alakú "abroncs" helyett sok alsószoknyából alakították. A bokáig érő selyemszoknya előtt körben sötétlila kötő van. A testhönálló, vagy testhözálló nevét a szabása és viselése adja, a női felsőruha követi a test vonalát, derékban szűkülő, és a szegése a harang alakú szoknyára szépen rásimul. A nő fekete színű, selyem fejkendőt visel.' },
-				   {name:'oltozet2', good: false , leiras :'Menyecske öltözet-együttese. Apátfalva, 20. sz. eleje'}
+   var oltozet = [ {name:'oltozet1' , good: false , leiras :'<p class="cim" >Makói női népviselet (1857)</p>    Makó város népviseletéről az egyik első képi ábrázolás Joseph Bösstől származik. A nő ünnepi ruhájának formáját a polgári biedermeier szoknya alatt viselt kúp alakú "abroncs" helyett sok alsószoknyából alakították. A bokáig érő selyemszoknya előtt körben sötétlila kötő van. A testhönálló, vagy testhözálló nevét a szabása és viselése adja, a női felsőruha követi a test vonalát, derékban szűkülő, és a szegése a harang alakú szoknyára szépen rásimul. A nő fekete színű, selyem fejkendőt visel.' },
+				   {name:'oltozet2', good: false , leiras :'<p class="cim" >Menyecske öltözet-együttese. Apátfalva, 20. sz. eleje </p> A menyecske testhönállója, szoknyája és kötője kékfestőből varrott, mindhárom viseletdarab anyaga azonos, de mintázata eltérő, kék alapon nyomott piros és fehér virágokkal díszített. A testhönálló a női test vonalát követi, kívül széles fekete csipkével díszített. A szoknya elöl nyitott, derékban sűrűn ráncolt, széle fekete csipkeszegéllyel szegett. Kötője derékban ritkán ráncolt, alján fodorral. '},
+			       {name:'oltozetF', good: false , leiras :'<p class="cim" >Makói férfi népviselet (1857) </p> A férfi ráncos szárú csizmában van, fehér vászon, bőgatyát visel, inggel és felette ezüst pitykés lajbit, fekete posztóból varrt, zsinórozással díszített, sonkaujjú mándlit, valamint fekete posztó, pörgeszélű, bogrács alakú kalapot.'}
 			
                  ] 
 
-    var  gragedObjectModel= [{name:'kendo',leiras:'Fekete fejkendő',endSpace:{X:262,Y:-36}, oltozetSzam:0 }
-	                        ,{name:'felsoszoknya',leiras:'Kötő',endSpace:{X:209,Y:147}, oltozetSzam:0}
-							,{name:'felso',leiras:'Testhönálló',endSpace:{X:205,Y:37}, oltozetSzam:0}
-							,{name:'alsoszoknya',leiras:'Szoknya',endSpace:{X:200,Y:166}, oltozetSzam:0}
-							,{name:'felso2',leiras:'Virágmintákkal díszített testhönálló', oltozetSzam:1 ,endSpace:{X:200,Y:-8}}
-							,{name:'kendo2',leiras:'Kék kendő', oltozetSzam:1,endSpace:{X:258,Y:-77}}
-							,{name:'szoknya2',leiras:'Szoknya', oltozetSzam:1,endSpace:{X:216,Y:189}}
-                            ,{name:'koto',leiras:'Kötő', oltozetSzam:1,endSpace:{X:216,Y:105}}	
+    var  gragedObjectModel= [{name:'kendo',leiras:'Fekete fejkendő',endSpace:{X:425,Y:-21}, oltozetSzam:0 }
+	                        ,{name:'felsoszoknya',leiras:'Kötő',endSpace:{X:379,Y:151}, oltozetSzam:0}
+							,{name:'felso',leiras:'Testhönálló',endSpace:{X:374,Y:54}, oltozetSzam:0}
+							,{name:'alsoszoknya',leiras:'Szoknya',endSpace:{X:366,Y:172}, oltozetSzam:0}
+							,{name:'felso2',leiras:'Virágmintákkal díszített testhönálló', oltozetSzam:1 ,endSpace:{X:365,Y:0}}
+							,{name:'kendo2',leiras:'Kék kendő', oltozetSzam:1,endSpace:{X:421,Y:-66}}
+							,{name:'szoknya2',leiras:'Szoknya', oltozetSzam:1,endSpace:{X:380,Y:192}}
+                            ,{name:'koto',leiras:'Kötő', oltozetSzam:1,endSpace:{X:380,Y:111}}	
+							
+							 ,{name:'felso_f',leiras:'Mándli', oltozetSzam:2,endSpace:{X:576,Y:-88}}
+							 ,{name:'melleny',leiras:'Mellény (lajbi)', oltozetSzam:2,endSpace:{X:591,Y:-60}}
+							 ,{name:'kalalp',leiras:'Kalap', oltozetSzam:2,endSpace:{X:627,Y:-161}}
+							 ,{name:'gatya',leiras:'Bőgatya', oltozetSzam:2,endSpace:{X:602,Y:39}}
 							]
+							
 	
 							
 							
@@ -450,12 +539,15 @@
 			}
 		);
 		  var leirContiner =document.querySelector("#oltozet_leiras");
-		if (hany ==1) {
+		if ((hany >0 )&& (hany <3)) {
 		 leirContiner.innerHTML=leiras;
-		} else if  (hany >1){
-		 leirContiner.innerHTML='Vicces vagy :-) !!';
+		 leirContiner.style.visibility ='visible';
+		} else if  (hany >2){
+		 leirContiner.innerHTML='Vicces vagy :-) (Egyszere csak 1 ötözet kell a nőre)!!';
+		leirContiner.style.visibility  ='visible';
 		}else {
 		 leirContiner.innerHTML='';
+		 leirContiner.style.visibility = "hidden";
 		}
 	}
 	
