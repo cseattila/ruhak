@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<head>
+		<style>
+			body   {
+			background-color:#FFDBB7;
+
+			}
+			.img_frame {
+			width :650px;
+
+			background-repeat: no-repeat;
+			margin: 10px  ;
+
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			display:table-cell;
+			}
+
+			.description_frame {
+
+			padding: 10px
+
+			display:block;
+			}
+
+			.vertical_main {
+			text-align : center;
+			width:1000px;
+			display:table;
+			margin:auto;
+			}
+
+			.lapozo {
+			display:table;
+			margin:10px;
+			text-align:center;
+			}
+			.lapozo div {
+			display:table-cell;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="vertical_main">
+			<div style ="display:table-row">		
+				<div class ="img_frame"> &nbsp;</div>
+
+				<div style="display:table-cell; height:400px; vertical-align: middle; text-align: center; 	margin: 10px  ; width:350px ">
+
+
+					<div class ="description_frame">&nbsp;</div>
+
+
+
+
+				</div>		
+			</div>
+			<div style ="display:table-row ;text-align:center;">
+			    <div class="lapozo" >
+			</div>
+			</div>
+		</div>
+		<script>
+			var kepek =  [ {seq:"1", description:"egyes kep", src:"mappa/HOMONNAI/1.HOM_002649.jpg"},
+			{seq:"1", description:"masik", src:"mappa/HOMONNAI/1.HOM_002649.jpg"}  ] ;
+			var img_frame =document.querySelector(".img_frame");
+			var description_frame =document.querySelector(".description_frame");
+
+			//mi 
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			const imgseq = urlParams.get('img_seq');
+
+			img_frame.style.backgroundImage = "url('"+kepek[imgseq].src+"')";
+
+			var desc_frame =document.querySelector(".description_frame");
+
+			desc_frame.innerHTML=kepek[imgseq].description;
+
+			var lapozo =document.querySelector(".lapozo");
+			var lap_conetent = ""
+			var i = 1;
+			kepek.forEach(function(entry) {
+			lap_conetent +="<div><form  method=\"get\" > <input type=\"hidden\" value=\""+(i-1)+"\" name=\"img_seq\"/>  <input type=\"submit\" value=\""+i+"\"> </form></div>";
+				i++
+				});
+				lapozo.innerHTML = lap_conetent;
+
+			</script>
+		</body>
+	</html>

@@ -8,7 +8,12 @@
         user-scalable=no" />
   <title>Ruhák</title>
   <style>
+  .kozepCol{
+  display: inline-block;
+  }
+  
     #container {
+	  transform:  scale(0.35,0.350);
       width: 950px;
       height: 500px;
 	   background-image: url('hater.jpg');
@@ -18,7 +23,7 @@
       justify-content: left;
       overflow: hidden;
       border-radius: 7px;
-      touch-action: none;
+      touch-action: auto;
 		margin: auto;
 	  
       
@@ -43,7 +48,7 @@
 	  background-color:#FFFFFF;
       border-radius: 7px;
    
-      touch-action: none;
+      touch-action: auto;
       user-select: none;
 	
 	   background-repeat: no-repeat;
@@ -264,7 +269,7 @@
       touch-action: auto;
       user-select: none;
 	  position: absolute;
-	  transform:  translate3d(760px, 100px, 0);
+	  transform:  translate(760px, 100px);
 	 font-size: 9pt;
 	   overflow-y: scroll;
 	    text-align: justify;
@@ -283,7 +288,7 @@
       touch-action: none;
       user-select: none;
 	  	  position: absolute;
-		transform:  translate3d(450px, 0px, 0);
+		transform:  translate(450px, 0px);
 	}
 	#log {
 	  display : none;
@@ -325,19 +330,28 @@
         background-repeat: no-repeat;
 	
 	}
+	
   </style>
 </head>
 
-<body style="background-color:#FFDBB7;">
+<body id="ezaz" style="background-color:#FFDBB7;">
 <div id="foCim">
 
  &nbsp; 
 </div>
-<p style="text-align:center;">A nagymosás során összekeveredtek két női és egy férfi viselet darabjai. Segíts szétválogatni őket! <br> Húzd a figurákra a szerinted összetartozó elemeket! Ha helyesen válogatod össze az egyes szetteket, rövid ismertetést kapsz az adott viseletről! </p>
-  <div id="outerContainer">
- 
- 
- <div id="container">
+
+<div>
+<div class="kozepCol">
+Nézeges Homonnai üvegnegativokat
+</div>
+ <div class="kozepCol">
+   <p style="text-align:center;">
+	  A nagymosás során összekeveredtek két női és egy férfi viselet darabjai. Segíts szétválogatni őket! <br> 
+	  Húzd a figurákra a szerinted összetartozó elemeket! Ha helyesen válogatod össze az egyes szetteket, rövid ismertetést kapsz az adott viseletről! 
+   </p>
+   <div id="outerContainer">
+    
+       <div id="container">
 		
 	
 	<div id = "szekerny" >
@@ -399,12 +413,15 @@
 		</div>
     </div>
 	
-	
-	 
- 
-	
-  </div>
-  
+    </div>
+
+
+ </div>
+
+<div class="kozepCol">
+textil
+</div>
+   </div>
   <div id ="log">
   Fogj egy ruhát
   </div> 
@@ -432,7 +449,7 @@
 		renderFeliratok();	
 	}
 	
-   var oltozet = [ {name:'oltozet1' , good: false , leiras :'<p class="cim" >Makói női népviselet (1857)</p>    Makó város népviseletéről az egyik első képi ábrázolás Joseph Bösstől származik. A nő ünnepi ruhájának formáját a polgári biedermeier szoknya alatt viselt kúp alakú "abroncs" helyett sok alsószoknyából alakították. A bokáig érő selyemszoknya előtt körben sötétlila kötő van. A testhönálló, vagy testhözálló nevét a szabása és viselése adja, a női felsőruha követi a test vonalát, derékban szűkülő, és a szegése a harang alakú szoknyára szépen rásimul. A nő fekete színű, selyem fejkendőt visel.' },
+   var oltozet = [ {name:'oltozet1' , good: false , leiras :'<p class="cim" >Makói női népviselet (1857)</p>    Makó város népviseletéről az egyik első képi ábrázolás Joseph Bösstől származik. A nő ünnepi ruhájának formáját a polgári biedermeier szoknya alatt viselt kúp alakú "abroncs" helyett sok alsószoknyából alakították ki. A bokáig érő selyemszoknya előtt körben sötétlila kötő van. A testhönálló, vagy testhözálló nevét a szabása és viselése adja, a női felsőruha követi a test vonalát, derékban szűkülő, és a szegése a harang alakú szoknyára szépen rásimul. A nő fekete színű, selyem fejkendőt visel.' },
 				   {name:'oltozet2', good: false , leiras :'<p class="cim" >Menyecske öltözet-együttese. Apátfalva, 20. sz. eleje </p> A menyecske testhönállója, szoknyája és kötője kékfestőből varrott, mindhárom viseletdarab anyaga azonos, de mintázata eltérő, kék alapon nyomott piros és fehér virágokkal díszített. A testhönálló a női test vonalát követi, kívül széles fekete csipkével díszített. A szoknya elöl nyitott, derékban sűrűn ráncolt, széle fekete csipkeszegéllyel szegett. Kötője derékban ritkán ráncolt, alján fodorral. '},
 			       {name:'oltozetF', good: false , leiras :'<p class="cim" >Makói férfi népviselet (1857) </p> A férfi ráncos szárú csizmában van, fehér vászon, bőgatyát visel, inggel és felette ezüst pitykés lajbit, fekete posztóból varrt, zsinórozással díszített, sonkaujjú mándlit, valamint fekete posztó, pörgeszélű, bogrács alakú kalapot.'}
 			
@@ -442,10 +459,10 @@
 	                        ,{name:'felsoszoknya',leiras:'Kötő',endSpace:{X:379,Y:151}, oltozetSzam:0}
 							,{name:'felso',leiras:'Testhönálló',endSpace:{X:374,Y:54}, oltozetSzam:0}
 							,{name:'alsoszoknya',leiras:'Szoknya',endSpace:{X:366,Y:172}, oltozetSzam:0}
-							,{name:'felso2',leiras:'Virágmintákkal díszített testhönálló', oltozetSzam:1 ,endSpace:{X:365,Y:0}}
-							,{name:'kendo2',leiras:'Kék kendő', oltozetSzam:1,endSpace:{X:421,Y:-66}}
-							,{name:'szoknya2',leiras:'Szoknya', oltozetSzam:1,endSpace:{X:380,Y:192}}
-                            ,{name:'koto',leiras:'Kötő', oltozetSzam:1,endSpace:{X:380,Y:111}}	
+							,{name:'felso2',leiras:'Testhönálló', oltozetSzam:1 ,endSpace:{X:365,Y:0}}
+							,{name:'kendo2',leiras:'Kék fejkendő', oltozetSzam:1,endSpace:{X:421,Y:-66}}
+							,{name:'szoknya2',leiras:'Szoknya', oltozetSzam:1,endSpace:{X:380,Y:179}}
+                            ,{name:'koto',leiras:'Kötő', oltozetSzam:1,endSpace:{X:380,Y:95}}	
 							
 							 ,{name:'felso_f',leiras:'Mándli', oltozetSzam:2,endSpace:{X:576,Y:-88}}
 							 ,{name:'melleny',leiras:'Mellény (lajbi)', oltozetSzam:2,endSpace:{X:591,Y:-60}}
@@ -521,15 +538,15 @@
     }
 
     function helyreugraszt(element){
-		 if ((Math.abs(element.endSpace.X -element.currentX)<3) ||
-           (Math.abs(element.endSpace.Y -element.currentY)<3) 	  ) {
+		 if ((Math.abs(element.endSpace.X -element.currentX)<5) &&
+           (Math.abs(element.endSpace.Y -element.currentY)<5) 	  ) {
 		   element.currentX =element.endSpace.X;
 		   element.currentY =element.endSpace.Y;
 		   }
 	}
 	
     function setTranslate(xPos, yPos, el) {
-      el.style.transform = " perspective(500px) translate3d(" + xPos + "px, " + yPos + "px, 0) scale("+ ((xPos <150) ?0.5:1)+") ";
+      el.style.transform = " translate(" + xPos + "px, " + yPos + "px) scale("+ ((xPos <150) ?0.5:1)+") ";
     }
 	
 	  var good= true;
@@ -570,7 +587,9 @@
 	   }
 	}
    }
-   
+    var logContiner =document.querySelector("#log");
+	 var body =document.querySelector("#ezaz");
+	logContiner.innerHTML=  window.innerWidth+" x "+window.innerHeight;;
   </script>
 </body>
 
