@@ -2,6 +2,8 @@
 <html>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 	<head>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
 		<style>
 			body   {
 			background-color:#FFDBB7;
@@ -66,15 +68,20 @@
 			</div>
 		</div>
 		<script>
-			var kepek =  [ {seq:"1", description:"egyes kep", src:"mappa/HOMONNAI/1.HOM_002649.jpg"},
+	
+	var kepek =  [ {seq:"1", description:"egyes kep", src:"mappa/HOMONNAI/1.HOM_002649.jpg"},
 			{seq:"1", description:"masik", src:"mappa/HOMONNAI/1.HOM_002649.jpg"}  ] ;
+
+		$.getJSON( "php_engine/engine.php?f=regi", function( data ) {
+		   kepek = data;
+				
 			var img_frame =document.querySelector(".img_frame");
 			var description_frame =document.querySelector(".description_frame");
 
 			//mi 
 			const queryString = window.location.search;
 			const urlParams = new URLSearchParams(queryString);
-			const imgseq = urlParams.get('img_seq');
+			const imgseq = urlParams.get('img_seq')  ? urlParams.get('img_seq'):0;
 
 			img_frame.style.backgroundImage = "url('"+kepek[imgseq].src+"')";
 
@@ -90,7 +97,7 @@
 				i++
 				});
 				lapozo.innerHTML = lap_conetent;
-
+			});
 			</script>
 		</body>
 	</html>
