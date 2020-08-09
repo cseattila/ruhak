@@ -34,7 +34,7 @@ function get_file() {
     /* fetch values */
     while (mysqli_stmt_fetch($stmt)) {
 	
-		header("Content-type: " . mimeType);
+		header("Content-type: " . $mimeType);
         echo $name;
     }
 	
