@@ -43,14 +43,28 @@ function get_file() {
  	
 }
 	
+function getOltozet() {
+ 	global $conn;
+		
+	$sql = "SELECT * FROM oltozekek order by zIndex";
+	$sth = $conn->query($sql);
 
+
+	$rows = array();
+	while($r = mysqli_fetch_assoc($sth)) {
+		$rows[] = $r;
+	}
+	print json_encode($rows);
+}
   
   
  switch ($_GET['f']) {
     case 'regi':
        get_homonaiDaTa();
         break;
-    
+    case 'oltozet':
+		getOltozet ();
+	break;
 	       // Do something
 
  case 'file':

@@ -126,6 +126,7 @@
 
 	}
 	
+	
 
 	#alap_2 {
 	  width: 100%;
@@ -209,9 +210,10 @@
 	#kalalp {
       width: 66px;
       height:53px;
-      background-repeat: no-repeat;
-	  background-image: url('../kalalp.png');
+      background-image: url('../kalalp.png');
       background-position: -182px -50px;
+	  
+	  background-repeat: no-repeat;
       touch-action: none;
       user-select: none;
 	  position: absolute;
