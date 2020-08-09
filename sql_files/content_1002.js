@@ -19,25 +19,17 @@ var dragedIttem = null;
 			{name:'oltozetF', good: false , leiras :'<p class="cim" >Makói férfi népviselet (1857) </p> A férfi ráncos szárú csizmában van, fehér vászon, bőgatyát visel, inggel és felette ezüst pitykés lajbit, fekete posztóból varrt, zsinórozással díszített, sonkaujjú mándlit, valamint fekete posztó, pörgeszélű, bogrács alakú kalapot.'}
 
 			] 
+			
+			$.getJSON( "php_engine/engine.php?f=oltozet", function( data ) {
+				gragedObjectModel= data;
+				gragedObjectModel.forEach(element => initElement(element));
+			});
+			
 
-			gragedObjectModel= [{name:'kendo',       leiras:'Fekete fejkendő',endSpace:{X:425,Y:-21}, oltozetSzam:0 }
-			,{name:'felsoszoknya',leiras:'Kötő',           endSpace:{X:379,Y:151}, oltozetSzam:0}
-			,{name:'felso',leiras:'Testhönálló',           endSpace:{X:374,Y:54}, oltozetSzam:0}
-			,{name:'alsoszoknya',leiras:'Szoknya',         endSpace:{X:366,Y:172}, oltozetSzam:0}
-			,{name:'felso2',leiras:'Testhönálló', oltozetSzam:1 ,endSpace:{X:365,Y:0}}
-			,{name:'kendo2',leiras:'Kék fejkendő', oltozetSzam:1,endSpace:{X:421,Y:-66}}
-			,{name:'szoknya2',leiras:'Szoknya', oltozetSzam:1,endSpace:{X:380,Y:179}}
-			,{name:'koto',leiras:'Kötő', oltozetSzam:1,endSpace:{X:380,Y:95}}	
-			,{name:'felso_f',leiras:'Mándli', oltozetSzam:2,endSpace:{X:576,Y:-88}}
-			,{name:'melleny',leiras:'Mellény (lajbi)', oltozetSzam:2,endSpace:{X:591,Y:-60}}
-			,{name:'kalalp',leiras:'Kalap', oltozetSzam:2,endSpace:{X:627,Y:-161}}
-			,{name:'gatya',leiras:'Bőgatya', oltozetSzam:2,endSpace:{X:602,Y:39}}
-			]
-
-			gragedObjectModel.forEach(element => initElement(element));
+			
 		
-		logContiner =document.querySelector("#log");
-		logContiner.innerHTML=  window.innerWidth+" x "+window.innerHeight;;
+			logContiner =document.querySelector("#log");
+			logContiner.innerHTML=  window.innerWidth+" x "+window.innerHeight;
 		
 		}
 						
@@ -63,6 +55,12 @@ var dragedIttem = null;
 			e.xOffset = 0;
 			e.yOffset = 0;
 			setTranslate(e.currentX, e.currentY, e.element);
+			childNode.style.backgroundImage = "url('"+e.image_src+"')";
+			childNode.style.width=""+e.width+"px";
+			childNode.style.height=""+e.height+"px";
+			childNode.style.backgroundPosition =""+e.backgroundPositionX+"px "+e.backgroundPositionY+"px";
+			childNode.style.backgroundSize =""+e.backgroundScale+"%";
+			childNode.className = "ruhaDarab";
 			renderFeliratok();	
 		}
 
@@ -123,10 +121,10 @@ var dragedIttem = null;
 		}
 
 		function helyreugraszt(element){
-		if ((Math.abs(element.endSpace.X -element.currentX)<5) &&
-				(Math.abs(element.endSpace.Y -element.currentY)<5) 	  ) {
-						element.currentX =element.endSpace.X;
-						element.currentY =element.endSpace.Y;
+		if ((Math.abs(element.endSpaceX -element.currentX)<5) &&
+				(Math.abs(element.endSpaceY -element.currentY)<5) 	  ) {
+						element.currentX =element.endSpaceX;
+						element.currentY =element.endSpaceY;
 						}
 		}
 
@@ -165,9 +163,9 @@ var dragedIttem = null;
 
 		function testElement(element){
 
-											if (typeof element.endSpace  !== 'undefined'){
-											if ((Math.abs(element.endSpace.X -element.currentX)>10) ||
-											(Math.abs(element.endSpace.Y -element.currentY)>10) 	  ) {
+											if (typeof element.endSpaceX  !== 'undefined' && typeof element.endSpaceY  !== 'undefined'){
+											if ((Math.abs(element.endSpaceX -element.currentX)>10) ||
+											(Math.abs(element.endSpaceY -element.currentY)>10) 	  ) {
 											oltozet[element.oltozetSzam].good = false ;
 											}
 											}
