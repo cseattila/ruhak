@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<head>
+  <meta name="viewport" 
+        content="width=device-width, 
+        initial-scale=1.0, 
+        user-scalable=no" />
+  <title>Ruhák</title>
+  <style>
+  .kozepCol{
+  display: inline-block;
+  }
+  
+    #container {
+	  transform:  scale(0.35,0.350);
+      width: 950px;
+      height: 500px;
+	   background-image: url('hater.jpg');
+      background-color: #556;
+      display: flex;
+      align-items: left;
+      justify-content: left;
+      overflow: hidden;
+      border-radius: 7px;
+      touch-action: auto;
+		margin: auto;
+	  
+      
+	  
+  left: 0;
+  right: 0;
+  z-index: 9999;
+
+   background-position: center;
+     background-size: 950px 500px;
+    }
+	
+	
+	#szekerny {
+	
+	  width: 460px;
+      height:535px;
+	  
+	  margin: 5px 5px;
+	  order:0;
+      padding:20px
+	  background-color:#FFFFFF;
+      border-radius: 7px;
+   
+      touch-action: auto;
+      user-select: none;
+	
+	   background-repeat: no-repeat;
+	  background-image: url('szekreny.png');
+      background-position: -40px -20px;
+	}
+	#szekernyInner {
+	  width: 100%
+      height:100%;
+	   margin: 50px 50px;
+	}
+	
+    #kendo {
+      width: 80px;
+      height: 110px;
+      background-repeat: no-repeat;
+	  background-image: url('lany-kendo.png');
+      background-position: -52px -34px;
+      touch-action: none;
+      user-select: none;
+	  position: absolute;
+    }
+	#felsoszoknya {
+      width: 190px;
+      height:160px;
+      background-repeat: no-repeat;
+	  background-image: url('lany-felsoszoknya.png');
+      background-position: -75px -215px;
+      touch-action: none;
+      user-select: none;
+	  position: absolute;
+    }
+	
+	
+	#felso {
+      width: 180px;
+      height:160px;
+      background-repeat: no-repeat;
+	  background-image: url('lany-felso.png');
+      background-position: -75px -120px;
+      touch-action: none;
+      user-select: none;
+	  position: absolute;
+    }
+	
+
+
+	#alsoszoknya {
+       width: 220px;
+       height:200px;
+       background-repeat: no-repeat;
+	   background-image: url('lany-alsoszoknya.png');
+       background-position: -65px -230px;
+       touch-action: none;
+       user-select: none;
+	   position: absolute;
+    }
+
+
+    .alap_keret {
+	  width: 140px;
+      height:400px;
+	  margin:70px 0px; 
+      order:2;
+      border-radius: 7px;
+      touch-action: none;
+      user-select: none;
+
+	}
+	
+
+	#alap {
+	 width: 100%;
+      height:100%;
+       background-repeat: no-repeat;
+	   background-image: url('lany-alap.png');
+       background-position: -120px -20px;
+    }
+	
+	
+	
+    .alap_keret_2 {
+	  width: 180px;
+      height:400px;
+	  margin:70px 0px; 
+    order:2;
+
+	
+      border-radius: 7px;
+   
+      touch-action: none;
+      user-select: none;
+
+	}
+	
+
+	#alap_2 {
+	  width: 100%;
+      height:100%;
+       background-repeat: no-repeat;
+	   background-image: url('ferfi_alap.png');
+       background-position: -110px -25px;
+	   
+    }
+	
+	
+	
+	#felso2 {
+      width: 200px;
+      height:200px;
+      background-repeat: no-repeat;
+	  background-image: url('felsoruha.png');
+      background-position: -70px -120px;
+      touch-action: none;
+      user-select: none;
+      position: absolute;
+
+    }
+	
+	#kendo2 {
+      width: 83px;
+      height:92px;
+      background-repeat: no-repeat;
+	  background-image: url('kendo.png');
+      background-position: -129px -67px;
+      touch-action: none;
+      user-select: none;
+      position: absolute;
+    }
+	
+	#szoknya2 {
+      width: 163px;
+      height:187px;
+      background-repeat: no-repeat;
+	  background-image: url('szoknya.png');
+      background-position: -84px -211px;
+      touch-action: none;
+      user-select: none;
+      position: absolute;
+	}
+	
+	#koto {
+      width: 163px;
+      height:187px;
+      background-repeat: no-repeat;
+	  background-image: url('koto.png');
+      background-position: -84px -211px;
+      touch-action: none;
+      user-select: none;
+	  position: absolute;
+	}
+	
+	
+	
+	#felso_f {
+      width: 163px;
+      height:187px;
+      background-repeat: no-repeat;
+	  background-image: url('felso.png');
+      background-position: -134px -110px;
+      touch-action: none;
+      user-select: none;
+	  position: absolute;
+	}
+	
+	#melleny {
+      width: 100px;
+      height:123px;
+      background-repeat: no-repeat;
+	  background-image: url('melleny.png');
+      background-position: -151px -122px;
+      touch-action: none;
+      user-select: none;
+	  position: absolute;
+	}
+	#kalalp {
+      width: 66px;
+      height:53px;
+      background-repeat: no-repeat;
+	  background-image: url('kalalp.png');
+      background-position: -182px -50px;
+      touch-action: none;
+      user-select: none;
+	  position: absolute;
+	}
+	#gatya {
+      width: 109px;
+      height:164px;
+      background-repeat: no-repeat;
+	  background-image: url('gatya.png');
+      background-position: -156px -203px;
+      touch-action: none;
+      user-select: none;
+	  position: absolute;
+	}
+	
+	-----------------------
+	
+    #item:active {
+      background-color: rgba(168, 218, 220, 1.00);
+    }
+	
+    #item:hover {
+      cursor: pointer;
+      border-width: 20px;
+    }
+	
+	#oltozet_leiras {
+	 width: 160px;
+      height:350px;
+	  
+	  margin: 5px;
+	  order:5;
+
+	  background-color:#EFEFEF;
+      border-radius: 7px;
+   
+      touch-action: auto;
+      user-select: none;
+	  position: absolute;
+	  transform:  translate(760px, 100px);
+	 font-size: 9pt;
+	   overflow-y: scroll;
+	    text-align: justify;
+	}
+	
+	#Cim {
+	  width: 350px;
+      height:20px;
+	  
+	  text-align:center;
+	  background-color:#5FEF6F;
+      border-radius: 7px;
+    
+	  margin:70px 0px; 
+   
+      touch-action: none;
+      user-select: none;
+	  	  position: absolute;
+		transform:  translate(450px, 0px);
+	}
+	#log {
+	  display : none;
+	}
+	
+	#outerContainer {
+	width :100%;
+	 align-items: center;
+	 
+      justify-content: center;
+	  
+	background-color:#FFDBB7;
+ 
+
+	}
+	#hater {
+	width :100%;
+	height:100%;
+	   background-image: url('hater.jpg');
+	    background-position: center;
+     
+      background-size: cover;	
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+	}
+	.cim {
+	padding: 15px 0px 0px 0px  ; 
+	margin : 2px;
+	text-align :center;
+	}
+	#foCim {
+	width :100%;
+	height:150px;
+	padding: 0px 0px 0px 0px  ; 
+	margin : 2px;
+	text-align :center;
+	background-image: url('focim.png');
+	    background-position: center;
+        background-repeat: no-repeat;
+	
+	}
+	
+  </style>
+</head>
+
+<body id="ezaz" style="background-color:#FFDBB7;">
+<div id="foCim">
+
+ &nbsp; 
+</div>
+
+<div>
+<div class="kozepCol">
+Nézeges Homonnai üvegnegativokat
+</div>
+ <div class="kozepCol">
+   <p style="text-align:center;">
+	  A nagymosás során összekeveredtek két női és egy férfi viselet darabjai. Segíts szétválogatni őket! <br> 
+	  Húzd a figurákra a szerinted összetartozó elemeket! Ha helyesen válogatod össze az egyes szetteket, rövid ismertetést kapsz az adott viseletről! 
+   </p>
+   <div id="outerContainer">
+    
+       <div id="container">
+		
+	
+	<div id = "szekerny" >
+	  <div id = "szekernyInner">
+	   <div id="szoknya2">	 &nbsp;      </div>
+	   <br>
+	   
+      <div id="alsoszoknya">	 &nbsp;      </div>
+	  <br>
+	  
+	  <div id="felsoszoknya">	 &nbsp;      </div>
+	  <br>
+	  	  
+	  <div id="felso">     &nbsp;  </div>  
+ 	  <br>
+	  
+	  <div id="kendo">	 &nbsp;     </div>
+	  <br>
+	   
+	   <div id="koto"> &nbsp;    </div>
+	   <br> 
+	   
+	  <div id="felso2"> &nbsp;   </div>
+  	  <br> 
+	   
+	   <div id="kendo2"> &nbsp; </div>
+	   
+	   <br>
+	   
+	   
+	   <!-- férfi -->
+	   <div id="gatya"> &nbsp;   </div>
+  	   <br>
+	   <div id="melleny"> &nbsp;   </div>
+			<br>
+		
+	   
+			<div id="felso_f"> &nbsp;   </div>
+			<br>
+	   
+			<div id="kalalp"> &nbsp;   </div>
+  	    
+	    
+		
+		
+		</div>
+	</div>
+		<div class ="alap_keret">
+			<div id="alap">		&nbsp;   </div>
+		</div>
+     	<div class ="alap_keret_2">
+			<div id="alap_2">		&nbsp;   </div>
+		</div>
+		 <div id ="Cim">
+			Fogj egy ruhát a szekrényből!
+		</div>
+		<div id ="oltozet_leiras">
+		&nbsp; 
+		</div>
+    </div>
+	
+    </div>
+
+
+ </div>
+
+<div class="kozepCol">
+textil
+</div>
+   </div>
+  <div id ="log">
+  Fogj egy ruhát
+  </div> 
+
+  <script>
+   var container = document.querySelector("#container");
+   var cimContiner =document.querySelector("#Cim");
+	
+	function initElement(e) {
+		 e.element = document.querySelector("#"+e.name);
+		 
+		 if(!('currentX' in e)){
+		   e.currentX = 0;
+		 }
+		 
+		 if(!('currentY' in e)){
+		   e.currentY = 0;
+		 }
+		
+		 e.initialX =  e.currentX ;
+		 e.initialY = e.currentY;
+		 e.xOffset = 0;
+		 e.yOffset = 0;
+		 setTranslate(e.currentX, e.currentY, e.element);
+		renderFeliratok();	
+	}
+	
+   var oltozet = [ {name:'oltozet1' , good: false , leiras :'<p class="cim" >Makói női népviselet (1857)</p>    Makó város népviseletéről az egyik első képi ábrázolás Joseph Bösstől származik. A nő ünnepi ruhájának formáját a polgári biedermeier szoknya alatt viselt kúp alakú "abroncs" helyett sok alsószoknyából alakították ki. A bokáig érő selyemszoknya előtt körben sötétlila kötő van. A testhönálló, vagy testhözálló nevét a szabása és viselése adja, a női felsőruha követi a test vonalát, derékban szűkülő, és a szegése a harang alakú szoknyára szépen rásimul. A nő fekete színű, selyem fejkendőt visel.' },
+				   {name:'oltozet2', good: false , leiras :'<p class="cim" >Menyecske öltözet-együttese. Apátfalva, 20. sz. eleje </p> A menyecske testhönállója, szoknyája és kötője kékfestőből varrott, mindhárom viseletdarab anyaga azonos, de mintázata eltérő, kék alapon nyomott piros és fehér virágokkal díszített. A testhönálló a női test vonalát követi, kívül széles fekete csipkével díszített. A szoknya elöl nyitott, derékban sűrűn ráncolt, széle fekete csipkeszegéllyel szegett. Kötője derékban ritkán ráncolt, alján fodorral. '},
+			       {name:'oltozetF', good: false , leiras :'<p class="cim" >Makói férfi népviselet (1857) </p> A férfi ráncos szárú csizmában van, fehér vászon, bőgatyát visel, inggel és felette ezüst pitykés lajbit, fekete posztóból varrt, zsinórozással díszített, sonkaujjú mándlit, valamint fekete posztó, pörgeszélű, bogrács alakú kalapot.'}
+			
+                 ] 
+
+    var  gragedObjectModel= [{name:'kendo',leiras:'Fekete fejkendő',endSpace:{X:425,Y:-21}, oltozetSzam:0 }
+	                        ,{name:'felsoszoknya',leiras:'Kötő',endSpace:{X:379,Y:151}, oltozetSzam:0}
+							,{name:'felso',leiras:'Testhönálló',endSpace:{X:374,Y:54}, oltozetSzam:0}
+							,{name:'alsoszoknya',leiras:'Szoknya',endSpace:{X:366,Y:172}, oltozetSzam:0}
+							,{name:'felso2',leiras:'Testhönálló', oltozetSzam:1 ,endSpace:{X:365,Y:0}}
+							,{name:'kendo2',leiras:'Kék fejkendő', oltozetSzam:1,endSpace:{X:421,Y:-66}}
+							,{name:'szoknya2',leiras:'Szoknya', oltozetSzam:1,endSpace:{X:380,Y:179}}
+                            ,{name:'koto',leiras:'Kötő', oltozetSzam:1,endSpace:{X:380,Y:95}}	
+							
+							 ,{name:'felso_f',leiras:'Mándli', oltozetSzam:2,endSpace:{X:576,Y:-88}}
+							 ,{name:'melleny',leiras:'Mellény (lajbi)', oltozetSzam:2,endSpace:{X:591,Y:-60}}
+							 ,{name:'kalalp',leiras:'Kalap', oltozetSzam:2,endSpace:{X:627,Y:-161}}
+							 ,{name:'gatya',leiras:'Bőgatya', oltozetSzam:2,endSpace:{X:602,Y:39}}
+							]
+							
+	
+							
+							
+	gragedObjectModel.forEach(element => initElement(element));
+	
+  
+    var dragedIttem = null;
+    var active = false;
+    
+    container.addEventListener("touchstart", dragStart, false);
+    container.addEventListener("touchend", dragEnd, false);
+    container.addEventListener("touchmove", drag, false);
+
+    container.addEventListener("mousedown", dragStart, false);
+    container.addEventListener("mouseup", dragEnd, false);
+    container.addEventListener("mousemove", drag, false);
+
+    function dragStart(e) {
+	
+	  dragedIttem =  gragedObjectModel.find(element => element.element === e.target); 
+	  
+	  if ( typeof dragedIttem !== 'undefined') {
+        active = true;
+		cimContiner.innerHTML=dragedIttem.leiras;
+		  if (e.type === "touchstart") {
+			dragedIttem.initialX = e.touches[0].clientX - dragedIttem.xOffset;
+			dragedIttem.initialY = e.touches[0].clientY - dragedIttem.yOffset;
+		  } else {
+			dragedIttem.initialX = e.clientX - dragedIttem.xOffset;
+			dragedIttem.initialY = e.clientY - dragedIttem.yOffset;
+		  }
+      }
+    }
+
+    function dragEnd(e) {
+	
+      dragedIttem.initialX = dragedIttem.currentX;
+      dragedIttem.initialY = dragedIttem.currentY;
+
+      active = false;
+      testEnd();
+	  renderFeliratok();
+	}
+
+    function drag(e) {
+      if (active) {
+      
+        e.preventDefault();
+      
+        if (e.type === "touchmove") {
+          dragedIttem.currentX = e.touches[0].clientX - dragedIttem.initialX;
+          dragedIttem.currentY = e.touches[0].clientY - dragedIttem.initialY;
+        } else {
+          dragedIttem.currentX = e.clientX - dragedIttem.initialX;
+          dragedIttem.currentY = e.clientY - dragedIttem.initialY;
+        }
+
+		helyreugraszt(dragedIttem);
+        dragedIttem.xOffset = dragedIttem.currentX;
+        dragedIttem.yOffset = dragedIttem.currentY;
+
+
+        setTranslate(dragedIttem.currentX, dragedIttem.currentY, dragedIttem.element);
+		
+      }
+    }
+
+    function helyreugraszt(element){
+		 if ((Math.abs(element.endSpace.X -element.currentX)<5) &&
+           (Math.abs(element.endSpace.Y -element.currentY)<5) 	  ) {
+		   element.currentX =element.endSpace.X;
+		   element.currentY =element.endSpace.Y;
+		   }
+	}
+	
+    function setTranslate(xPos, yPos, el) {
+      el.style.transform = " translate(" + xPos + "px, " + yPos + "px) scale("+ ((xPos <150) ?0.5:1)+") ";
+    }
+	
+	  var good= true;
+	function testEnd(){
+	 oltozet.forEach(element => element.good=true);
+  	 var logContiner =document.querySelector("#log");
+	 gragedObjectModel.forEach(element => testElement(element));
+	 logContiner.innerHTML="A ruhák :"+JSON.stringify(gragedObjectModel) +" Az öltözetek"+JSON.stringify(oltozet);
+	 
+	}
+	
+	function renderFeliratok(){
+	    var leiras ='';
+		var hany=0;
+		oltozet.forEach(function (e) { 
+			if (e.good) {leiras +=e.leiras ;hany++;}
+			}
+		);
+		  var leirContiner =document.querySelector("#oltozet_leiras");
+		if ((hany >0 )&& (hany <3)) {
+		 leirContiner.innerHTML=leiras;
+		 leirContiner.style.visibility ='visible';
+		} else if  (hany >2){
+		 leirContiner.innerHTML='Vicces vagy :-) (Egyszere csak 1 ötözet kell a nőre)!!';
+		leirContiner.style.visibility  ='visible';
+		}else {
+		 leirContiner.innerHTML='';
+		 leirContiner.style.visibility = "hidden";
+		}
+	}
+	
+   function testElement(element){
+    
+	if (typeof element.endSpace  !== 'undefined'){
+	   if ((Math.abs(element.endSpace.X -element.currentX)>10) ||
+           (Math.abs(element.endSpace.Y -element.currentY)>10) 	  ) {
+        oltozet[element.oltozetSzam].good = false ;
+	   }
+	}
+   }
+    var logContiner =document.querySelector("#log");
+	 var body =document.querySelector("#ezaz");
+	logContiner.innerHTML=  window.innerWidth+" x "+window.innerHeight;;
+  </script>
+</body>
+
+</html>
