@@ -6,7 +6,7 @@ if ($conn->connect_error) {
 function get_homonaiDaTa() {
  	global $conn;
 		
-	$sql = "SELECT * FROM homonai";
+	$sql = "SELECT * FROM homonai order by seq";
 	$sth = $conn->query($sql);
 
 
